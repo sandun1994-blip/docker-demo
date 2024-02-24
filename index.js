@@ -1,12 +1,13 @@
-const express =require('express')
+var express = require('express');
+var app = express();
 
-const app =express()
+app.get('/', function (req, res) {
+  res.send('Hello World!');
+});
 
-app.get('/',(req,res)=>{
-    res.send('demo')
-})
+var server = app.listen(3000, function () {
+  var host = server.address().address;
+  var port = server.address().port;
 
-
-app.listen(3000,()=>{
-    console.log('app listen 3000');
-})
+  console.log('Example app listening at http://%s:%s', host, port);
+});
