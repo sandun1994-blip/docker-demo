@@ -13,7 +13,6 @@ pipeline {
                 echo "Building.."
                 sh '''
                npm i
-               node index.js
                 '''
             }
         }
