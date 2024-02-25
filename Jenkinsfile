@@ -12,7 +12,8 @@ pipeline {
             steps {
                 echo "Building.."
                 sh '''
-               
+               npm i
+               node index.js
                 '''
             }
         }
